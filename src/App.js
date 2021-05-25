@@ -35,8 +35,8 @@ function App() {
 
       if(tokenRes.data){
         const userRes = await axios.get(
-          'http://localhost:8000/users',
-          // `${process.env.REACT_APP_SERVER_URL}/users`,
+          // 'http://localhost:8000/users',
+          `${process.env.REACT_APP_SERVER_URL}/users`,
           {
             headers: {"x-auth-token": token}
           }

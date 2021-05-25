@@ -26,7 +26,7 @@ function App() {
       }
 
       const tokenRes = await axios.post(
-        'http://localhost:8000/users/tokenIsValid',
+        `${process.env.REACT_APP_SERVER_URL}/users/tokenIsValid`,
         null,
         {
           headers: {"x-auth-token": token}

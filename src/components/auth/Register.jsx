@@ -24,9 +24,9 @@ const Register = () => {
         confirmPassword: passwordCheck,
         displayName
       }
-      await axios.post('http://localhost:8000/users/register', newUser)
+      await axios.post(`${process.env.REACT_APP_SERVER_URL}/users/register`, newUser)
       // auto login
-      const loginRes = await axios.post("http://localhost/users/login", {
+      const loginRes = await axios.post(`${process.env.REACT_APP_SERVER_URL}/users/login`, {
         email,
         password
       })
